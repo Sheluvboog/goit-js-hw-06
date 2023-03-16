@@ -8,10 +8,14 @@ const ingredients = [
 ];
 const ingredientsUl = document.querySelector('#ingredients');
 
+const listItems = [];
+
 ingredients.forEach(item => {
   const liEl = document.createElement('li');
   liEl.className = "item";
   liEl.innerHTML = item;
 
-  ingredientsUl.append(liEl);
+  listItems.push(liEl);
 })
+
+ingredientsUl.append(...listItems);
